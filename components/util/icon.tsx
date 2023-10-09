@@ -65,6 +65,10 @@ const iconColorClass: {
     regular: "text-white opacity-80",
     circle: "bg-white-400 dark:bg-white-500 text-white-50",
   },
+  bluenavy: {
+    regular: "text-black opacity-80",
+    circle: "bg-black dark:bg-black text-black",
+  },
 };
 
 const iconSizeClass = {
@@ -87,6 +91,8 @@ export const Icon = ({
   }
 
   const { name, color, size = "medium", style = "regular" } = data;
+
+  console.log("data", data);
 
   const theme = useTheme();
 

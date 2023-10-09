@@ -1,13 +1,16 @@
 import React from "react";
 import { Container } from "../util/container";
 import { Section } from "../util/section";
-import type { TinaTemplate } from "tinacms";
+import type { Template } from "tinacms";
 import { PageBlocksTestimonial } from "../../tina/__generated__/types";
 import { tinaField } from "tinacms/dist/react";
+import { ColorPickerInput } from "../../tina/fields/color";
 
 export const Testimonial = ({ data }: { data: PageBlocksTestimonial }) => {
+  const { second = "blue" } = data;
   return (
     <Section color={data.color}>
+      <h1>{second}</h1>
       <Container size="large">
         <blockquote>
           <div
@@ -61,7 +64,7 @@ export const Testimonial = ({ data }: { data: PageBlocksTestimonial }) => {
   );
 };
 
-export const testimonialBlockSchema: TinaTemplate = {
+export const testimonialBlockSchema: Template = {
   name: "testimonial",
   label: "Testimonial",
   ui: {
@@ -96,6 +99,14 @@ export const testimonialBlockSchema: TinaTemplate = {
         { label: "Tint", value: "tint" },
         { label: "Primary", value: "primary" },
       ],
+    },
+    {
+      type: "string",
+      label: "Second Color",
+      name: "second",
+      ui: {
+        component: ColorPickerInput,
+      },
     },
   ],
 };

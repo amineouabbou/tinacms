@@ -11,6 +11,7 @@ export const colorOptions = [
   "pink",
   "purple",
   "white",
+  "bluenavy",
 ];
 
 export const ColorPickerInput = wrapFieldsWithMeta(({ input }) => {
@@ -24,6 +25,7 @@ export const ColorPickerInput = wrapFieldsWithMeta(({ input }) => {
     pink: "bg-pink-500 border-pink-600",
     purple: "bg-purple-500 border-purple-600",
     white: "bg-white border-gray-150",
+    bluenavy: "bg-black border-black",
   };
 
   return (
@@ -33,7 +35,7 @@ export const ColorPickerInput = wrapFieldsWithMeta(({ input }) => {
         {colorOptions.map((color) => {
           return (
             <button
-              className={`w-9 h-9 rounded-full shadow border ${
+              className={`w-9 h-9 rounded-full shadow-xl border ${
                 inputClasses[color]
               } ${
                 input.value === color

@@ -22,10 +22,16 @@ export const IconPickerInput = wrapFieldsWithMeta(({ input }) => {
     });
   }, [filter]);
 
+  console.log("filter", filter);
+
+  console.log("input", input);
+
   const inputLabel = Object.keys(IconOptions).includes(input.value)
     ? parseIconName(input.value)
     : "Select Icon";
   const InputIcon = IconOptions[input.value] ? IconOptions[input.value] : null;
+
+  console.log("inputLabel", inputLabel, "InputIcon", InputIcon);
 
   return (
     <div className="relative z-[1000]">

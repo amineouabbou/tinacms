@@ -9,6 +9,7 @@ import { PageBlocksHero } from "../../tina/__generated__/types";
 import { tinaField } from "tinacms/dist/react";
 
 export const Hero = ({ data }: { data: PageBlocksHero }) => {
+  console.log("data hero props", data);
   const theme = useTheme();
   const headlineColorClasses = {
     blue: "from-blue-400 to-blue-600",

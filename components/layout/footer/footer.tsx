@@ -6,6 +6,7 @@ import { Container } from "../../util/container";
 import { RawRenderer } from "./rawRenderer";
 import { useTheme } from "..";
 import { Icon } from "../../util/icon";
+import { tinaField } from "tinacms/dist/react";
 
 export const Footer = ({ data, icon, rawData }) => {
   const theme = useTheme();
@@ -43,7 +44,10 @@ export const Footer = ({ data, icon, rawData }) => {
       : footerColor.default;
 
   return (
-    <footer className={`bg-gradient-to-br ${footerColorCss}`}>
+    <footer
+      data-tina-field={tinaField(data, `color`)}
+      className={`bg-gradient-to-br ${footerColorCss}`}
+    >
       <Container className="relative" size="small">
         <div className="flex justify-between items-center gap-6 flex-wrap">
           <Link
@@ -66,6 +70,7 @@ export const Footer = ({ data, icon, rawData }) => {
                 className="inline-block opacity-80 hover:opacity-100 transition ease-out duration-150"
                 href={data.social.facebook}
                 target="_blank"
+                data-tina-field={tinaField(data, `social`)}
               >
                 <FaFacebookF
                   className={`${socialIconClasses} ${

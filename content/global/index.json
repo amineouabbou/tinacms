@@ -1,8 +1,8 @@
 {
   "header": {
     "icon": {
-      "name": "Tina",
-      "color": "orange",
+      "name": "BiAccessibility",
+      "color": "green",
       "style": "float"
     },
     "name": "Tina Starter",
@@ -23,7 +23,7 @@
     ]
   },
   "footer": {
-    "color": "default",
+    "color": "primary",
     "social": {
       "facebook": "/",
       "twitter": "/",
