@@ -30,7 +30,7 @@ blocks:
           name: BiCodeBlock
           color: red
           style: float
-        title: Amazing Feature
+        title: Amazing Feature edited *
         text: >-
           Aliquam blandit felis rhoncus, eleifend ipsum in, condimentum nibh.
           Praesent ac faucibus risus, eu lacinia enim.
